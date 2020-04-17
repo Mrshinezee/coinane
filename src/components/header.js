@@ -2,31 +2,33 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import '../styles/header.scss'
+
+const HeaderLinks = props => (
+<Link className={props.linkStyle} to={props.to}> {props.text}</Link>
+)
+
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
+  <header className='headerContainer'>
     <div
       style={{
-        margin: `0 auto`,
+        margin: `10px`,
         maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+      <HeaderLinks to="/" linkStyle='headerTitle' text={siteTitle}/>
+    </div>
+    
+    <nav className='headerNav'>
+      <HeaderLinks to="/" linkStyle='headerLink' text='Advantages'/>
+      <HeaderLinks to="/landing" linkStyle='headerLink' text='How to trade'/>
+      <HeaderLinks to="/" linkStyle='headerLink' text='Funds withdrawal'/>
+    </nav>
+    <div className='buttonContainer'>
+      <button className='headerButton'>
+        LOG IN
+      </button>
     </div>
   </header>
 )

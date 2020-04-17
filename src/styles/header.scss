@@ -1,0 +1,53 @@
+.headerContainer {
+ background-color: #182332;
+//  margin-bottom: 1.45rem;
+ display: grid;
+ grid-template-columns: 20% 60% 20%;
+
+    .headerTitle{
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    .headerNav,.buttonContainer{ 
+        margin: 10px;
+        padding: 1.45rem 1.0875rem;
+    }
+    .headerNav{
+        display: flex;
+        justify-content: space-around;
+        // border: 1px solid red;
+        max-width: 1000px;
+
+        .headerLink{
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+    }
+    .buttonContainer{
+        padding: 1.45rem 1.45rem;
+        .headerButton{
+            float: right;
+            padding: 5px 10px;
+            color: white;
+            border: 2px solid #A3A7AD;
+            border-radius: 5%;
+            background-color: #182332;
+            font-size: 14px;
+        }
+        .headerButton:hover {
+            color: white;
+            border: 2px solid white;
+          }
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .headerContainer {
+        grid-template-columns: repeat(2, auto);
+        .headerNav{
+            display: none;
+        }
+  }
+}

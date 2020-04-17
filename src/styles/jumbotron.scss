@@ -1,0 +1,25 @@
+.jumbotronContainer{
+    background-color: #182332;
+    margin: 0;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .jumbotronTitle{
+        color: white;
+        text-align: center;
+    }
+    .jumbotronMessage{
+        text-align: center;
+        color: #A3A7AD;
+    }
+    .registerButton{
+        float: right;
+        padding: 10px 60px;
+        color: white;
+        border-radius: 2px;
+        background-color: #03A9F4;
+        font-size: 20px;
+    }
+}
