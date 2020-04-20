@@ -48,6 +48,7 @@
         grid-template-columns: repeat(2, auto);
         .headerNav{
             display: none;
+            flex-direction: column-reverse;
         }
   }
 }
